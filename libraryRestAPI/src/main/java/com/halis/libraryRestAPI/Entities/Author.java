@@ -12,13 +12,13 @@ public class Author {
 	private int id;
 	
 	
-	@Column(name="surname")
-	private String surname;
+	
 	
 	@Column(name="name")
 	private String name;
 	
-	
+	@Column(name="surname")
+	private String surname;
 	
 
 	public Author(int id, String name, String surname) {
@@ -44,12 +44,11 @@ public class Author {
 	public void setName(String name) {
 		this.name = name;
 	}
-
-	public String getLastName() {
+	public String getSurname() {
 		return surname;
 	}
 
-	public void setLastName(String surname) {
+	public void setSurname(String surname) {
 		this.surname = surname;
 	}
 	

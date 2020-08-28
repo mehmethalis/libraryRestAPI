@@ -46,7 +46,8 @@ public class HibernateAuthorDal implements IAuthorDal{
 	@Override
 	public void delete(Author author) {
 		Session session=entityManager.unwrap(Session.class);
-		session.delete(author);
+		Author nauthor=session.get(Author.class, author.getId());
+		session.delete(nauthor);
 	}
 
 	@Override
