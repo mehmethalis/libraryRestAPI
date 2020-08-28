@@ -13,6 +13,8 @@ public interface IAuthorDal {
 	void update(Author author);
 
 	void delete(Author author);
+	
+	Author getById(int id);
 
 
 }

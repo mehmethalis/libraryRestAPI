@@ -11,18 +11,20 @@ public class Author {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	
+	
+	@Column(name="surname")
+	private String surname;
+	
 	@Column(name="name")
 	private String name;
 	
-	@Column(name="lastName")
-	private String lastName;
+	
 	
 
-	public Author(int id, String name, String lastName) {
-		super();
+	public Author(int id, String name, String surname) {
 		this.id = id;
 		this.name = name;
-		this.lastName = lastName;
+		this.surname = surname;
 	}
 	
 	public Author() {}
@@ -44,11 +46,11 @@ public class Author {
 	}
 
 	public String getLastName() {
-		return lastName;
+		return surname;
 	}
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setLastName(String surname) {
+		this.surname = surname;
 	}
 	
 

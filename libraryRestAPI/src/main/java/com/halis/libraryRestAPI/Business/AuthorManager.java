@@ -22,29 +22,31 @@ public class AuthorManager implements IAuthorService{
 	@Override
 	@Transactional
 	public List<Author> GetAll() {
-		
 		return this.authorDal.GetAll();
 	}
 
 	@Override
 	@Transactional
 	public void add(Author author) {
-		// TODO Auto-generated method stub
-		
+		this.authorDal.add(author);
 	}
 
 	@Override
 	@Transactional
 	public void update(Author author) {
-		// TODO Auto-generated method stub
-		
+		this.authorDal.update(author);
 	}
 
 	@Override
 	@Transactional
 	public void delete(Author author) {
-		// TODO Auto-generated method stub
-		
+		this.authorDal.delete(author);
+	}
+
+	@Override
+	@Transactional
+	public Author getById(int id) {
+		return this.authorDal.getById(id);
 	}
 
 }

@@ -13,5 +13,7 @@ public interface IAuthorService {
 	void update(Author author);
 
 	void delete(Author author);
+	
+	Author getById(int id);
 
 }

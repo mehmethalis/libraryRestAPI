@@ -31,20 +31,28 @@ public class HibernateAuthorDal implements IAuthorDal{
 
 	@Override
 	public void add(Author author) {
-		// TODO Auto-generated method stub
+		Session session=entityManager.unwrap(Session.class);
+		session.saveOrUpdate(author);
 		
 	}
 
 	@Override
 	public void update(Author author) {
-		// TODO Auto-generated method stub
+		Session session=entityManager.unwrap(Session.class);
+		session.saveOrUpdate(author);
 		
 	}
 
 	@Override
 	public void delete(Author author) {
-		// TODO Auto-generated method stub
-		
+		Session session=entityManager.unwrap(Session.class);
+		session.delete(author);
+	}
+
+	@Override
+	public Author getById(int id) {
+		Session session=entityManager.unwrap(Session.class);
+		return session.get(Author.class, id);
 	}
 
 }
