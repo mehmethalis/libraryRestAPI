@@ -12,43 +12,43 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.halis.libraryRestAPI.Business.IAuthorService;
-import com.halis.libraryRestAPI.Entities.Author;
+import com.halis.libraryRestAPI.Business.IBookService;
+import com.halis.libraryRestAPI.Entities.Book;
 
 @RestController
-@RequestMapping("/api/author")
-public class AuthorController {
+@RequestMapping("/api/book")
+public class BookController {
 	
-	private IAuthorService authorService;
+	private IBookService bookManager;
 
 	@Autowired
-	public AuthorController(IAuthorService authorService) {
-		this.authorService = authorService;
+	public BookController(IBookService bookManager) {
+		this.bookManager = bookManager;
 	}
 	
-	@GetMapping("/authors")
-	public List<Author> get(){
-		return authorService.GetAll();
+	@GetMapping("/books")
+	public List<Book> get(){
+		return bookManager.GetAll();
 	}
 	
-	@GetMapping("/authors/{id}")
-	public Author getById(@PathVariable int id){
-		return authorService.getById(id);
+	@GetMapping("/books/{id}")
+	public Book getById(@PathVariable int id){
+		return bookManager.getById(id);
 	}
 	
 	@PostMapping("/add")
-	public void add(@RequestBody Author author) {
-		authorService.add(author);
+	public void add(@RequestBody Book book) {
+		bookManager.add(book);
 	}
 	
 	@PutMapping("/update")
-	public void update(@RequestBody Author author) {
-		authorService.update(author);
+	public void update(@RequestBody Book book) {
+		bookManager.update(book);
 	}
 	
 	@DeleteMapping("/delete")
-	public void delete(@RequestBody Author author) {
-		authorService.delete(author);
+	public void delete(@RequestBody Book book) {
+		bookManager.delete(book);
 	}
 	
 

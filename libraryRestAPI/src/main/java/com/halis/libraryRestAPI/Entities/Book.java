@@ -14,52 +14,46 @@ public class Book {
 	@Column(name="name")
 	private String name;
 	
-	@Column(name="lastName")
-	private String lastName;
+	@Column(name="author_id")
+	private int author_id;
 	
-	@Column(name="authorId")
-	private int authorId;
-	
-	@Column(name="categoryId")
-	private int categoryId;
+	@Column(name="category_id")
+	private int category_id;
 	
 	@Column(name="isbn")
 	private String isbn;
 	
-	@Column(name="isShelf")
-	private boolean isShelf;
+	@Column(name="is_shelf")
+	private boolean is_shelf;
 	
-	@Column(name="locationNumber")
-	private String locationNumber;
+	@Column(name="location_number")
+	private String location_number;
 	
-	@Column(name="publicationId")
-	private int publicationId;
+	@Column(name="publication_id")
+	private int publication_id;
 	
-	@Column(name="whoHasId")
-	private int whoHasId;
+	@Column(name="whose_id")
+	private int whose_id;
 	
-	@Column(name="yearPrinting")
-	private int yearPrinting;
+	@Column(name="year_printing")
+	private int year_printing;
 
-
-	public Book(String name, String lastName, int authorId, int categoryId, String isbn, boolean isShelf,
-			String locationNumber, int publicationId, int whoHasId, int yearPrinting,int id) {
+	public Book(int id, String name, int author_id, int category_id, String isbn, boolean is_shelf,
+			String location_number, int publication_id, int whose_id, int year_printing) {
+		this.id = id;
 		this.name = name;
-		this.lastName = lastName;
-		this.authorId = authorId;
-		this.categoryId = categoryId;
+		this.author_id = author_id;
+		this.category_id = category_id;
 		this.isbn = isbn;
-		this.isShelf = isShelf;
-		this.locationNumber = locationNumber;
-		this.publicationId = publicationId;
-		this.whoHasId = whoHasId;
-		this.yearPrinting = yearPrinting;
-		this.id=id;
+		this.is_shelf = is_shelf;
+		this.location_number = location_number;
+		this.publication_id = publication_id;
+		this.whose_id = whose_id;
+		this.year_printing = year_printing;
 	}
-	
+
 	public Book() {}
 
-	
 	public int getId() {
 		return id;
 	}
@@ -67,7 +61,7 @@ public class Book {
 	public void setId(int id) {
 		this.id = id;
 	}
-	
+
 	public String getName() {
 		return name;
 	}
@@ -76,28 +70,20 @@ public class Book {
 		this.name = name;
 	}
 
-	public String getLastName() {
-		return lastName;
+	public int getAuthor_id() {
+		return author_id;
 	}
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setAuthor_id(int author_id) {
+		this.author_id = author_id;
 	}
 
-	public int getAuthorId() {
-		return authorId;
+	public int getCategory_id() {
+		return category_id;
 	}
 
-	public void setAuthorId(int authorId) {
-		this.authorId = authorId;
-	}
-
-	public int getCategoryId() {
-		return categoryId;
-	}
-
-	public void setCategoryId(int categoryId) {
-		this.categoryId = categoryId;
+	public void setCategory_id(int category_id) {
+		this.category_id = category_id;
 	}
 
 	public String getIsbn() {
@@ -108,45 +94,44 @@ public class Book {
 		this.isbn = isbn;
 	}
 
-	public boolean isShelf() {
-		return isShelf;
+	public boolean isIs_shelf() {
+		return is_shelf;
 	}
 
-	public void setShelf(boolean isShelf) {
-		this.isShelf = isShelf;
+	public void setIs_shelf(boolean is_shelf) {
+		this.is_shelf = is_shelf;
 	}
 
-	public String getLocationNumber() {
-		return locationNumber;
+	public String getLocation_number() {
+		return location_number;
 	}
 
-	public void setLocationNumber(String locationNumber) {
-		this.locationNumber = locationNumber;
+	public void setLocation_number(String location_number) {
+		this.location_number = location_number;
 	}
 
-	public int getPublicationId() {
-		return publicationId;
+	public int getPublication_id() {
+		return publication_id;
 	}
 
-	public void setPublicationId(int publicationId) {
-		this.publicationId = publicationId;
+	public void setPublication_id(int publication_id) {
+		this.publication_id = publication_id;
 	}
 
-	public int getWhoHasId() {
-		return whoHasId;
+	public int getWhose_id() {
+		return whose_id;
 	}
 
-	public void setWhoHasId(int whoHasId) {
-		this.whoHasId = whoHasId;
+	public void setWhose_id(int whose_id) {
+		this.whose_id = whose_id;
 	}
 
-	public int getYearPrinting() {
-		return yearPrinting;
+	public int getYear_printing() {
+		return year_printing;
 	}
 
-	public void setYearPrinting(int yearPrinting) {
-		this.yearPrinting = yearPrinting;
+	public void setYear_printing(int year_printing) {
+		this.year_printing = year_printing;
 	}
-
 	
 }

@@ -15,32 +15,32 @@ public class Employee {
 	@Column(name="name")
 	private String name;
 	
-	@Column(name="lastName")
-	private String lastName;
+	@Column(name="surname")
+	private String surname;
 	
-	@Column(name="birthDay")
-	private String birthDay;
+	@Column(name="birth_day")
+	private String birth_day;
 	
 	@Column(name="email")
 	private String email;
 	
-	@Column(name="idNumber")
-	private String idNumber;
+	@Column(name="id_number")
+	private String id_number;
 	
 	@Column(name="phone")
 	private String phone;
-
-	public Employee(int id, String name, String lastName, String birthDay, String email, String idNumber,
+	
+	public Employee(int id, String name, String surname, String birth_day, String email, String id_number,
 			String phone) {
 		this.id = id;
 		this.name = name;
-		this.lastName = lastName;
-		this.birthDay = birthDay;
+		this.surname = surname;
+		this.birth_day = birth_day;
 		this.email = email;
-		this.idNumber = idNumber;
+		this.id_number = id_number;
 		this.phone = phone;
 	}
-	
+
 	public Employee() {}
 
 	public int getId() {
@@ -59,20 +59,20 @@ public class Employee {
 		this.name = name;
 	}
 
-	public String getLastName() {
-		return lastName;
+	public String getSurname() {
+		return surname;
 	}
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setSurname(String surname) {
+		this.surname = surname;
 	}
 
-	public String getBirthDay() {
-		return birthDay;
+	public String getBirth_day() {
+		return birth_day;
 	}
 
-	public void setBirthDay(String birthDay) {
-		this.birthDay = birthDay;
+	public void setBirth_day(String birth_day) {
+		this.birth_day = birth_day;
 	}
 
 	public String getEmail() {
@@ -83,12 +83,12 @@ public class Employee {
 		this.email = email;
 	}
 
-	public String getIdNumber() {
-		return idNumber;
+	public String getId_number() {
+		return id_number;
 	}
 
-	public void setIdNumber(String idNumber) {
-		this.idNumber = idNumber;
+	public void setId_number(String id_number) {
+		this.id_number = id_number;
 	}
 
 	public String getPhone() {
@@ -98,5 +98,5 @@ public class Employee {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
-
+	
 }
