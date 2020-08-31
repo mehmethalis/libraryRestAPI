@@ -37,63 +37,20 @@ Library API which has developed with JAVA / Spring / MVC
 | Route | HTTP Verb	 | POST body	 | Description	 |
 | --- | --- | --- | --- |
 | /api/employee/employees | `GET` | Empty | List all employees. |
-| /api/employee/add | `POST` | {
-  "birth_day": "string",
-  "email": "string",
-  "id": 0,
-  "id_number": "string",
-  "name": "string",
-  "phone": "string",
-  "surname": "string"
-} | Create a new employee. |
+| /api/employee/add | `POST` | { "birth_day": "string","email": "string","id": 0,"id_number": "string","name": "string","phone":"string", "surname": "string"} | Create a new employee. |
 | /api/employee/employees/:employee_id | `GET` | Empty | Get a employee. |
-| /api/employee/update | `PUT` | {'id':'1',"birth_day": "string",
-  "email": "string",
-  "id": 0,
-  "id_number": "string",
-  "name": "string",
-  "phone": "string",
-  "surname": "string"} | Update a employee with new info. |
-| /api/employee/delete | `DELETE` | {'id':'1',"birth_day": "string",
-  "email": "string",
-  "id": 0,
-  "id_number": "string",
-  "name": "string",
-  "phone": "string",
-  "surname": "string"} | Delete a employee. |
+| /api/employee/update | `PUT` | {'id':'1',"birth_day": "string","email": "string","id": 0,"id_number": "string","name": "string","phone": "string","surname": "string"} | Update a employee with new info. |
+| /api/employee/delete | `DELETE` | {'id':'1',"birth_day": "string","email": "string","id": 0,"id_number": "string","name":"string","phone": "string","surname": "string"} | Delete a employee. |
 
   # Member
 
 | Route | HTTP Verb	 | POST body	 | Description	 |
 | --- | --- | --- | --- |
 | /api/member/members | `GET` | Empty | List all members. |
-| /api/member/add | `POST` | {
-  "birth_day": "string",
-  "date_membership": "string",
-  "email": "string",
-  "id": 0,
-  "id_number": "string",
-  "name": "string",
-  "phone": "string",
-  "surname": "string"
-} | Create a new member. |
+| /api/member/add | `POST` | {"birth_day": "string","date_membership": "string","email": "string","id": 0,"id_number": "string","name": "string","phone": "string","surname": "string"} | Create a new member. |
 | /api/member/members/:member_id | `GET` | Empty | Get a member. |
-| /api/member/update | `PUT` | {'id':'1',"birth_day": "string",
-  "date_membership": "string",
-  "email": "string",
-  "id": 0,
-  "id_number": "string",
-  "name": "string",
-  "phone": "string",
-  "surname": "string"} | Update a member with new info. |
-| /api/member/delete | `DELETE` | {'id':'1',"birth_day": "string",
-  "date_membership": "string",
-  "email": "string",
-  "id": 0,
-  "id_number": "string",
-  "name": "string",
-  "phone": "string",
-  "surname": "string"} | Delete a member. |
+| /api/member/update | `PUT` | {'id':'1',"birth_day": "string","date_membership": "string","email": "string","id": 0,"id_number": "string","name": "string","phone": "string","surname": "string"} | Update a member with new info. |
+| /api/member/delete | `DELETE` | {'id':'1',"birth_day": "string","date_membership": "string","email": "string","id": 0,"id_number": "string","name": "string","phone": "string","surname": "string"} | Delete a member. |
 
   # Publication
 
